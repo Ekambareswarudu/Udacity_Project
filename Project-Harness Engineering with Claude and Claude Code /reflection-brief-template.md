@@ -115,6 +115,7 @@ A single successful run cannot prove that failure modes are handled correctly. S
 System 4 limits blast radius through its bounded hot-state mechanism. The pipeline calls _trim_to_budget() and removes active alerts while the serialized state exceeds HOT_STATE_BYTE_BUDGET, then persists the result using write_atomic(). This keeps state growth bounded and prevents unexpectedly large state from propagating indefinitely across shifts. Because the limit is enforced in code, it does not depend solely on the model following a prompt instruction.
 
 **Part 3 — Honest assessment**
+
 **19. What broke**
 
 One first-try issue occurred during System 2 when the API credentials were not correctly configured, causing the initial API request to fail. After correcting the API configuration, System 2 completed successfully and produced the expected budget and evaluation artifacts. During evidence collection, I also discovered that the first evidence ZIP had been created before all required evidence files were copied into the final evidence tree. These issues showed that both environment configuration and final evidence validation need to be checked explicitly.
