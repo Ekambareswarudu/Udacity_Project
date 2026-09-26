@@ -26,6 +26,7 @@ Two tools with overlapping inputs are classify_claim and request_clarification, 
 For claim_04_neighbor_injury, the actual run took 5 turns and had an estimated cost of $0.0226, ending with a routed outcome. The README's reference run states 7 routed and 1 escalated across eight fixtures, with an estimated cost of approximately $0.05 on Haiku 4.5. My run also processed all eight fixtures, but the model's runtime trajectory and cost differed from the reference. The System 1 test suite passed all 29 tests, confirming the required behaviors even though the exact model path varied.
 
 **System 2 — Context strategy**
+
 **5. Reduction**
 
 budget.json reports a baseline of 38,708 tokens and an assembled context of 16,946 tokens, giving a 56.22% reduction. The active section dominates the assembled context at 15,789 tokens, compared with 204 for case_facts, 421 for resolved_refund, and 550 for resolved_subscription. The active section is kept largely verbatim because it represents the current unresolved conversation state needed for the copilot's immediate task.
