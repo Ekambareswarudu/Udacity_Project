@@ -40,6 +40,7 @@ The context strategy summarizes older resolved information while preserving info
 The normal eval.jsonl evaluation passed all six questions. In eval_control.jsonl, Q1 unexpectedly passed because the refund answer remained in context, while Q6 failed as expected because the structured status information was absent after the case-facts content was stripped. This demonstrates that context reduction needs explicit preservation rules and control evaluations. A successful answer alone does not prove that the intended context structure is responsible for the answer.
 
 **System 3 — Claude Code config**
+
 **8. Path-scoped rules**
 
 The React rule contains the following path globs:
@@ -92,6 +93,7 @@ The recovery logic in shift_monitor/recovery.py uses a 30-minute staleness thres
 The recorded hot_state.json size was 643 bytes. Keeping hot state small matters because the monitoring system runs repeatedly across shifts, so state size can accumulate over time. A bounded state reduces the amount of information that must be loaded and processed on each shift. The pipeline explicitly trims state to the configured byte budget before writing it.
 
 **Part 2 — Synthesis**
+
 **14. Three layers**
 
 The Model layer is represented by artifacts such as the System 1 system prompt and Claude's tool decisions. The Harness layer is represented by deterministic control code such as claims_intake/loop.py, the System 2 context assembly, and the System 3 Claude Code configuration. The Orchestration layer is represented by the System 4 pipeline, warm database, hot state, scratchpad, and shift execution. Together these layers separate model reasoning from deterministic execution and longer-running state management.
