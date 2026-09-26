@@ -1,0 +1,46 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment files / secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+*credentials*
+*secret*
+*token*
+*api_key*
+*apikey*
+
+# Personal/local configuration
+.vscode/
+.idea/
+.DS_Store
+
+# Generated artifacts
+*.zip
+*.log
+
+# Runtime/state data
+data/
+runs/
+hot_state.json
+shift_scratchpad.jsonl
+
+# Local evidence/submission packages
+evidence/
+submission/
+
+# Build/package metadata
+*.egg-info/
