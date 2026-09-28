@@ -1,0 +1,11 @@
+cat > "/workspace/Project-Evaluation and Observability Project/environment.txt" <<'EOF'
+OS: Linux x86_64
+Kernel: 6.6.97+
+Python: 3.13.0
+Date: 2026-09-28
+Environment: Vocareum Workspace
+Python environments: project-specific .venv environments created with python3 -m venv
+System 1: offline tests used because live API authentication was unavailable
+System 2: replay mode
+System 3: offline mode
+EOF
